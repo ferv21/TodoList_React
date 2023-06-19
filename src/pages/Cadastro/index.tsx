@@ -1,6 +1,10 @@
+import BarraLateral from '../../containers/Barralateral'
+import Formulario from '../../containers/Formulario'
+
 const Cadastro = () => (
   <>
-    <div>Oi</div>
+    <BarraLateral mostrarFiltros={false} />
+    <Formulario />
   </>
 )
 

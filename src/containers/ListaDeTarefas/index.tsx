@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 
 import Tarefa from '../../components/Tarefa'
-import { Container, Resultado } from './styles'
+import { MainContainer, Titulo } from '../../styles/'
 
 const ListaTarefas = () => {
   const { itens } = useSelector((state: RootReducer) => state.tarefas)
@@ -52,8 +52,8 @@ const ListaTarefas = () => {
 
   return (
     <>
-      <Container>
-        <Resultado>{mensagem}</Resultado>
+      <MainContainer>
+        <Titulo as="p">{mensagem}</Titulo>
         <ul>
           {tarefas.map((task) => (
             <li key={task.titulo}>
@@ -67,7 +67,7 @@ const ListaTarefas = () => {
             </li>
           ))}
         </ul>
-      </Container>
+      </MainContainer>
     </>
   )
 }
